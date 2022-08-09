@@ -14,7 +14,7 @@ body {
   margin: 0;
   display: flex;
   flex-direction: column;
-  background-image: url("background.png");
+  background-image: url("background.jpg");
   font-family: var(--font-default);
   font-size: 18px;
   max-width: 1300px;
@@ -43,7 +43,7 @@ img {
 .topnav a {
   float: left;
   display: block;
-  color: #000000;
+  color: #ffffff;
   text-align: center;
   padding: 12px 12px;
   margin: 5px;
@@ -67,6 +67,25 @@ img {
 .topnav .icon {
   display: none;
 }
+#thanks {
+border: 0px solid #1C6EA4;
+border-radius: 20px;
+color: #232323;
+height: 300px;
+width: 400px;
+}
+
+.btn-close {
+  background: #fe142f;
+    display: block;
+    margin: 0 auto;
+    border-radius: 7px;
+    font-size: 1rem;
+    padding: 12px 82px;
+    color: #fff;
+    cursor: pointer;
+    border: 0;
+}
 
 @media screen and (max-width: 768px) {
   .topnav a {display: none;}
@@ -89,17 +108,6 @@ img {
     text-align: left;
   }
 }
-
-
-
- @media screen and (max-width: 540px) {
-  .topnav a {display: none;}
-  .topnav a.icon {
-    float: right;
-    display: block;
-    margin-top: -15px;
-  }
-} 
 
 main {
   font-size: 130%;
@@ -347,6 +355,13 @@ input[data-error]::after {
 .select-selected {
   background-color: #fff;
 }
+.errormsg {
+  color: red;
+  font-size: 1rem;
+}
+.errorborder {
+  border: 2px solid rgb(255 0 0);
+}
 
 /* Style the arrow inside the select element: */
 .select-selected:after {
@@ -516,7 +531,85 @@ footer {
     text-align: center;
   }
 }
+@media screen and (max-width: 420px) {
+  body{
+    background-image: none;
+  }
+  .header-logo-mobile img {
+    margin: 20px;
+    height: 20px;
+  }
+  .topnav-mobile a
+  {
+    color: #ff0000;
+  }
+  .topnav a
+  {
+    color: #000000;
+  }
+  .topnav i
+  {
+    color: #ff0000;
+  }
+  .topnav i:hover
+  {
+    color: white;
+  }
 
+.hero-headline-mobile {
+  font-size: 2rem;
+  white-space: normal;
+  font-weight: bold;
+}
+.page
+{
+  width: auto;
+}
+.bground {
+  background-color: transparent;
+}
+.topnav {
+  color: #000000;
+}
+
+.hero-text-mobile {
+  width: unset;
+  font-size: 13px;
+  margin-top: 16px;
+}
+.hero-content-mobile {
+  background: #fff;
+  color: rgb(7, 7, 7);
+  padding: 0px;
+}
+.content {
+  margin: 69px 0px 0px 0px;
+}
+.container-thanks
+{
+  width: initial;
+}
+.hero-section-mobile
+{
+  min-height: auto;
+}
+.space
+{
+  width: 100%;
+  height: 1px;
+}
+#thanks {
+  height: 649.6087036132812px;
+    width: 375px;
+}
+footer {
+  margin: -50px 20px;
+}
+html {
+  width:100%;
+  height:100%;
+ }
+}
 @keyframes modalopen {
   from {
     opacity: 0;

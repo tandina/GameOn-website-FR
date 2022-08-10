@@ -67,7 +67,7 @@ color: #FFFFFF;
 body {
 
     background-image: linear-gradient(rgba(26, 39, 156, 0.4), rgba(26, 39, 156, 0.4)),
-    url("background.jpg");
+    url("../images/background.jpg");
     font-family: var(--font-default);
     font-size: 18px;
     margin-left: auto;
@@ -198,7 +198,7 @@ color: #FFFFFF;
 body {
 
     background-image: linear-gradient(rgba(26, 39, 156, 0.4), rgba(26, 39, 156, 0.4)),
-    url("background.jpg");
+    url("../images/background.jpg");
     font-family: var(--font-default);
     font-size: 18px;
     margin-left: auto;

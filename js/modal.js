@@ -42,22 +42,26 @@ const lastName = document.getElementById('last');
 const email = document.getElementById('email');
 const played = document.getElementById('played');
 const city = document.querySelectorAll('location');
-
+const birth = document.querySelectorAll('birthdate');
 
 const regexForName =/^[a-zA-Z-\s]+$/;
 const regexForEmail = /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
 const regexForNumber =/^[0-9]/;
+const regExAge = /(19\d\d|20[0-3])(-\d\d){2}/;
+const isAgeValid = regExAge.test(birth);
 
 const firstBorder = document.getElementById('first');
 const lastBorder = document.getElementById('last');
 const emailBorder = document.getElementById('email');
 const playedBorder = document.getElementById('played');
+const birthDayBorder = document.getElementById('birthdate');
 
 const firstErrorMsg = document.getElementById('firstErrorMsg');
 const lastErrorMsg = document.getElementById('lastErrorMsg');
 const emailErrorMsg = document.getElementById('emailErrorMsg');
 const playedErrorMsg = document.getElementById('playedErrorMsg');
 const cityErrorMsg = document.getElementById('cityErrorMsg');
+
 
 
       myForm.addEventListener('submit', function(e) {
@@ -96,18 +100,7 @@ const cityErrorMsg = document.getElementById('cityErrorMsg');
             playedErrorMsg.innerHTML = "veuillez indiquer le nombre de tournois GameOn Auquel vous avez participé, 0 étant le minimum";
             playedBorder.style.border = 'solid 2px red';
             e.preventDefault();
-          }
-          if(document.getElementById('checkbox1').checked)
-          {
-              return false;
-          }
-          else
-          {
-              alert ("veuilez accepter les condtions général");
-              e.preventDefault(); 
-              return false;
-          }
-                    
+          }         
       })
 
       function validateForm() {
@@ -123,6 +116,17 @@ const cityErrorMsg = document.getElementById('cityErrorMsg');
         if (!formValid) {
           cityErrorMsg.innerHTML = "veuilez choisir une ville";
         }
-        ;
+        
+        console.log(isAgeValid)
+        if(isAgeValid) {
+        birthdate.parentElement.setAttribute('data-error-visible', 'false');
+        birthdate.style.border = '0.19rem solid #279e7a';
+        return true;
+        }
+        birthdate.parentElement.setAttribute('data-error-visible', 'true');
+        birthdate.classList.add(FormData.error);
         return formValid;
+        ;
     };
+
+ 

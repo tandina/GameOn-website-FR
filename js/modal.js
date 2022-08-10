@@ -13,8 +13,6 @@ const modalBtn = document.querySelectorAll(".modal-btn");
 const formData = document.querySelectorAll(".formData");
 const close = document.querySelectorAll(".close");
 
-// const closeForm = document.querySelectorAll('[close-Form]');
-
 // launch modal event
 modalBtn.forEach((btn) => btn.addEventListener("click", launchModal));
 
@@ -37,6 +35,7 @@ modalbg.style.display = "none";
 
 const myForm = document.getElementById('myForm');
 
+// link to the html
 const firstName = document.getElementById('first');
 const lastName = document.getElementById('last');
 const email = document.getElementById('email');
@@ -44,18 +43,21 @@ const played = document.getElementById('played');
 const city = document.querySelectorAll('location');
 const birth = document.querySelectorAll('birthdate');
 
+// list of regex used to check data
 const regexForName =/^[a-zA-Z-\s]+$/;
 const regexForEmail = /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
 const regexForNumber =/^[0-9]/;
 const regExAge = /(19\d\d|20[0-3])(-\d\d){2}/;
 const isAgeValid = regExAge.test(birth);
 
+//list of specific css for each ID
 const firstBorder = document.getElementById('first');
 const lastBorder = document.getElementById('last');
 const emailBorder = document.getElementById('email');
 const playedBorder = document.getElementById('played');
 const birthDayBorder = document.getElementById('birthdate');
 
+//list of customed error message
 const firstErrorMsg = document.getElementById('firstErrorMsg');
 const lastErrorMsg = document.getElementById('lastErrorMsg');
 const emailErrorMsg = document.getElementById('emailErrorMsg');
@@ -63,7 +65,7 @@ const playedErrorMsg = document.getElementById('playedErrorMsg');
 const cityErrorMsg = document.getElementById('cityErrorMsg');
 
 
-
+// function used to check my form
       myForm.addEventListener('submit', function(e) {
           if(firstName.value.trim() == "") {
               firstErrorMsg.innerHTML = "le champs Prénom est requis";
@@ -102,7 +104,7 @@ const cityErrorMsg = document.getElementById('cityErrorMsg');
             e.preventDefault();
           }         
       })
-
+// function used to check form of radio type and birthdate type
       function validateForm() {
         var radios = document.getElementsByName("location");
         var formValid = false;
